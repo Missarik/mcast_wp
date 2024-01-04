@@ -1,0 +1,52 @@
+/**
+ * @package Inline Spoilers
+ */
+div.spoiler-wrap {
+  background-color: #eee;
+  border: 1px solid #c3cbd1;
+  border-radius: 5px;
+  border-left-width: 2px;
+  clear: both;
+  display: block;
+  margin: 6px auto;
+  padding: 0;
+}
+
+.spoiler-head {
+  color: #2a2a2a;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  font-size: 120%;
+  line-height: 1.5em;
+  margin: 5px;
+  padding: 5px;
+  text-align: left;
+}
+
+.spoiler-head.collapsed:after {
+  float: right;
+  padding-right: 10px;
+  font-family: "dashicons";
+  content: "\f345";
+}
+
+.spoiler-head.expanded:after {
+  float: right;
+  padding-right: 10px;
+  font-family: "dashicons";
+  content: "\f343";
+}
+
+.spoiler-head.collapsed.no-icon,
+.spoiler-head.expanded.no-icon {
+  background: none;
+  cursor: auto;
+  padding: 0 6px 0 6px;
+}
+
+div.spoiler-body {
+  background: #f5f5f5;
+  border-top: 1px solid #c3cbd1;
+  padding: 10px;
+}

@@ -1,13 +1,6 @@
 <?php 
 
 function classExample_assets(){
-    wp_enqueue_style(
-        'classExample-stylesheet-wp',
-        get_template_directory_uri().'/assets/css/style.css',
-        array(),
-        '1.0.0',
-        'all'
-    );
 
     wp_enqueue_style(
         'classExample-stylesheet-wpcore',
@@ -29,7 +22,6 @@ function classExample_assets(){
         'classExample_bs_script',
         get_template_directory_uri().'/assets/js/bootstrap.js',
         array(),
-        '1.0.0',
         true
     );
 

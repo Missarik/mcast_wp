@@ -21,9 +21,6 @@ function custom_customize_register($wp_customize){
         'section'=> 'custom_footer_options'
     ));
 
-    $wp_customize->add_setting('custom_theme_footer_bg', array(
-        'default' => '#ffc107',
-    ));
 
     $wp_customize->add_setting('custom_theme_footer_text', array(
         'default' => '#000000',
@@ -62,6 +59,63 @@ function custom_customize_register($wp_customize){
         ),
         'section'=>'custom_footer_options'
     ));
+
+
+
+
+    $wp_customize->add_section('custom_carousel_images', array(
+        'title' => 'Carousel Settings',
+        'description' => 'You can change the card options here'
+
+    ));
+
+    $wp_customize->add_setting(
+        'custom_image_1',
+        array(
+            'sanitize_callback' => 'esc_url_raw'
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'custom_image_1',
+            array(
+                'label' => 'Upload Image 1',
+                'priority' => 20,
+                'section' => 'custom_carousel_images',
+                'button_labels' => array( // All These labels are optional
+                    'select' => 'Select Logo',
+                    'remove' => 'Remove Logo',
+                    'change' => 'Change Logo',
+                )
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'custom_image_2',
+        array(
+            'sanitize_callback' => 'esc_url_raw'
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'custom_image_2',
+            array(
+                'label' => 'Upload Image 2',
+                'priority' => 20,
+                'section' => 'custom_carousel_images',
+                'button_labels' => array( // All These labels are optional
+                    'select' => 'Select Logo',
+                    'remove' => 'Remove Logo',
+                    'change' => 'Change Logo',
+                )
+            )
+        )
+    );
 }
 
 add_action("customize_register","custom_customize_register");

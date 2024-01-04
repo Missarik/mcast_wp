@@ -48,15 +48,20 @@
   </div>
       </div>
       <div class="col-2">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar navbar-nav me-auto mb-2 mb-lg-0 main-menu-div w-100">
       <?php
     wp_nav_menu(
       array(
-        'theme_location' => '',
+        'theme_location' => 'right-menu',
       )
     );
     ?>
       </div>
     </div>
+  </div>
+  </div>
   </div>  
 </nav>
   </div>
