@@ -55,6 +55,8 @@
         )));
     
     }
+
+    
     
     add_action( 'customize_register', 'diwp_theme_customizer_options' );
 

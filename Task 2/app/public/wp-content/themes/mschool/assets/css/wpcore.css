@@ -5,6 +5,9 @@ header {
   background-color: #8785de;
 }
 
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .navbar-brand {
   color: #ffffff;
@@ -21,6 +24,10 @@ nav {
 
 .logo {
   width: 50px;
+}
+
+.footer-logo {
+  max-width: 100px !important;
 }
 
 a:hover{
@@ -41,7 +48,7 @@ a:hover{
 
 .carouselHome img {
   position: absolute;
-  top: -200px;
+  top: -300px;
 }
 
 .home-padding-left {
@@ -59,6 +66,10 @@ a:hover{
 
 .padding-top {
   padding-top: 70px;
+}
+
+.contact-info{
+  padding-left: 480px;
 }
 
 .box {
@@ -150,18 +161,18 @@ a:hover{
   justify-content: space-evenly;
 }
 
-#menu-enquire-to-study-container li{
+.menu-enquire-to-study-container li{
   padding: 0;
   margin: 0;
   margin-right: 20px;
 }
 
-#menu-enquire-to-study-container li a{
+.menu-enquire-to-study-container li a{
   text-decoration: none;
   display: block;
   padding: 20px;
 }
-#menu-enquire-to-study-container li h6{ 
+.menu-enquire-to-study-container li h6{ 
   color: white;
 
 }
@@ -175,7 +186,8 @@ a:hover{
 }
 
 .footer {
-  background-color: #8785de;
+  background-color: #1a1878;
+  color: #ffffff;
 }
 
   .entry-content img {
@@ -506,3 +518,53 @@ a:hover{
   .format-video {}
   .format-audio {}
   .format-chat {}
+
+  @media only screen and (max-width: 600px) {
+
+    .searchBar{
+      display: none;
+    }
+
+    #menu-top-menu {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+    }
+
+    #menu-enquire-to-study {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+    }
+
+    .home-padding-left {
+      padding-left: 10px;
+    }
+    
+    .home-padding-right {
+      padding-right: 10px;
+    }
+
+    .contact-info {
+      padding-left: 0px;
+    }
+
+    .custom-toggler.navbar-toggler {
+      border-color: #ffffff;
+  }
+
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url(
+  "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(128, 128, 128)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+    .footerRow{
+      display: flex;
+      flex-direction: column;
+    }
+
+    #carousel-mv{
+      display: none;
+    }
+
+  }

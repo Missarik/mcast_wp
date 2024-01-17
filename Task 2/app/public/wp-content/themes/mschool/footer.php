@@ -11,7 +11,7 @@ $footer_class = "bg-" . $footer_bg;
 
 
 <div class="container-fluid footer <?php echo $footer_class.' '.$footer_text;?>">
-  <div class="row">
+  <div class="row footerRow">
     <?php
 
     $footer_layout = get_theme_mod('custom_footer_widget_count','2');

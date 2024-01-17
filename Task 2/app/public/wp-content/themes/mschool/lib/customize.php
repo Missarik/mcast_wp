@@ -21,6 +21,9 @@ function custom_customize_register($wp_customize){
         'section'=> 'custom_footer_options'
     ));
 
+    $wp_customize->add_setting('custom_theme_footer_bg', array(
+        'default' => '#000000',
+    ));
 
     $wp_customize->add_setting('custom_theme_footer_text', array(
         'default' => '#000000',
@@ -116,7 +119,51 @@ function custom_customize_register($wp_customize){
             )
         )
     );
+    $wp_customize->add_setting(
+        'custom_image_3',
+        array(
+            'sanitize_callback' => 'esc_url_raw'
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'custom_image_3',
+            array(
+                'label' => 'Upload Image 3',
+                'priority' => 20,
+                'section' => 'custom_carousel_images',
+                'button_labels' => array( // All These labels are optional
+                    'select' => 'Select Logo',
+                    'remove' => 'Remove Logo',
+                    'change' => 'Change Logo',
+                )
+            )
+        )
+    );
+    $wp_customize->add_section('custom_dark_mode', array(
+        'title'=> 'Dark Mode',
+        'description'=> 'You can switch between light mode and dark mode here'
+    ));
+
+    $wp_customize->add_setting('custom_dark_mode_setting', array(
+        'default'=>'light',
+        'sanitize_callback'=>'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('custom_dark_mode_setting', array(
+        'type'=>'select',
+        'label'=>'Dark Mode Setting',
+        'choices'=> array(
+            'light'=>'Light',
+            'dark'=>'Dark'
+        ),
+        'section'=> 'custom_dark_mode'
+    ));
 }
+
+
 
 add_action("customize_register","custom_customize_register");
 

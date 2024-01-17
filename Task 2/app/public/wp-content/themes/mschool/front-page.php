@@ -2,9 +2,10 @@
 
 $carousel1 = get_theme_mod('custom_image_1'); 
 $carousel2 = get_theme_mod('custom_image_2');
+$carousel3 = get_theme_mod('custom_image_3');
 
 ?>
-
+<div id="carousel-mv">
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -19,7 +20,7 @@ $carousel2 = get_theme_mod('custom_image_2');
       <img src="<?php echo $carousel2; ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item carouselHome">
-      <img src="<?php echo $carousel1; ?>" class="d-block w-100" alt="...">
+      <img src="<?php echo $carousel3; ?>" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -30,6 +31,7 @@ $carousel2 = get_theme_mod('custom_image_2');
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
 </div>
 <!-- 
 
@@ -63,8 +65,22 @@ $carousel2 = get_theme_mod('custom_image_2');
 </div> -->
 
 <!--  used for 'show single page as home page' -->
+<?php $dark_mode = get_theme_mod('custom_dark_mode_setting');
 
-<div class="container">
+    $background = '';
+    $text_color = '';
+
+    if ($dark_mode == 'light') {
+        $background = 'background-color: #ffffff;';
+        $text_color = 'color: #000000;';
+
+    } else {
+        $background = 'background-color: #242526;';
+        $text_color = 'color: #ffffff;';
+    };
+    ?>
+
+<div class="container" style="<?php echo $background; ?><?php echo $text_color; ?>">
     <div class="row">
         <div class="col-12">
 

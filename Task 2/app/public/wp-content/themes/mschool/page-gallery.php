@@ -1,8 +1,22 @@
 <?php get_header();?>
 
 <!--  used for specific pages -->
+<?php $dark_mode = get_theme_mod('custom_dark_mode_setting');
 
-<div class="container ">
+    $background = '';
+    $text_color = '';
+
+    if ($dark_mode == 'light') {
+        $background = 'background-color: #ffffff;';
+        $text_color = 'color: #000000;';
+
+    } else {
+        $background = 'background-color: #242526;';
+        $text_color = 'color: #ffffff;';
+    };
+    ?>
+
+<div class="container">
     <div class="row">
         <div class="col-12">
 <div >

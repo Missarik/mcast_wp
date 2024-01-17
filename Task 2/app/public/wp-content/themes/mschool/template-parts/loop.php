@@ -1,7 +1,20 @@
+<?php $dark_mode = get_theme_mod('custom_dark_mode_setting');
+
+    $background = '';
+    $text_color = '';
+
+    if ($dark_mode == 'light') {
+        $background = 'background-color: #ffffff;';
+        $text_color = 'color: #000000;';
+
+    } else {
+        $background = 'background-color: #242526;';
+        $text_color = 'color: #ffffff;';
+    };
+    ?>
 
 
-
-    <div class="col-8">
+    <div class="col-8" style="<?php echo $background; ?><?php echo $text_color; ?>">
     <h1><?php echo $args['section_title']; ?></h1>
         <?php if (have_posts()):
         while (have_posts()):
@@ -12,7 +25,7 @@
               <h5 class="card-title"><?php the_title(); ?></h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"><?php the_date() ?> by <?php the_author_posts_link() ?></h6>
               <p class="card-text"><?php the_excerpt();?></p>
-              <a href="#" class="btn btn-primary">Read more</a>
+              <a href="<?php echo get_permalink() ?>" class="btn btn-primary">Read more</a>
             </div>
           </div>
           <br>

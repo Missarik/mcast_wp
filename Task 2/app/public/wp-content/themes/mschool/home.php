@@ -2,7 +2,7 @@
 
 
 
-<div class="container">
+<div class="container" style="<?php echo $background; ?><?php echo $text_color; ?>">
     <div class="row">
         <div class="col-12">
 
