@@ -6,10 +6,12 @@
 
 This repository contains source code for mcast_wp WordPress website. It serves as a reference for developers and collaborators working on the project.
 
-This theme was made as a template for schools mostly for post-secondary and University. The colour scheme used was inspired by the colour scheme of MCAST.
+This theme was made as a template for schools, mostly for post-secondary and University, however, it can be used in any way the user pleases. The colour scheme used was inspired by the colour scheme of MCAST.
+
+The following 2 sections will explain each feature found in customize.php and functions.php, how they are used and how to access them.
 
 
-Customize.php:
+customize.php:
 
 The customize.php page allows the developers to add extra features that they wish. Developers are free to add, remove or adjust features through this page. All the following features can be edited from the customizer in WordPress.
 
@@ -22,7 +24,7 @@ Custom_carousel_image allows the user to insert 3 images in the carousel found i
 Custom_dark_mode lets the user to change the website from light to dark mode with a click of a button. Light mode sets the background colour of the body to white and the text to black, and dark mode sets the background colour of the body to a dark grey colour and the text to white.
 
 
-Functions.php:
+functions.php:
 
 The functions page allows developers to add extra features just like the customize.php, however these features cannot be adjusted through the admin page.
 
@@ -34,7 +36,7 @@ classExample_themeFooter sets the background and text colour of the footer set m
 
 classExample_postorderasc filters all posts searched in the search bar in ascending order.
 
-Diwp_theme_customizer_options sets the logo for your website. To set the logo of your website, the user can rename any image to ‘logo.jpg’.
+Diwp_theme_customizer_options sets the logo for your website. To set up the logo of your website, the user can rename any image to ‘logo.jpg’.
 
 
 Plugins
@@ -45,3 +47,4 @@ The following plugins are used in this project:
 
 Contributing
 We welcome contributions! If you have any issues or have any suggestions for improvement, please create a new issue or submit a pull request.
+If you would wish to contact us feel free to send us an email at example@gmail.com.
